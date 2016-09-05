@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-# call the proprietary setup
+# Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/htc/m7/m7-vendor.mk)
-
-# local overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Inherit from m7-common
 $(call inherit-product, device/htc/m7-common/m7-common.mk)
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += device/htc/m7/overlay
